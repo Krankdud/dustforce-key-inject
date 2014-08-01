@@ -6,10 +6,10 @@ If you run key_inject.py without any arguments, it will ask you for the file nam
 and which key to inject.
 
 For command-line folks:
-Usage: python key_inject.py <filename> <key>
-- <filename> is the name of the file for the level you want to inject a key into.
+Usage: python key_inject.py filename key
+- filename is the name of the file for the level you want to inject a key into.
              Path should be included if it isn't in the same folder as this script.
-- <key> is a number from 0 to 3 which determines which key to inject
+- key is a number from 0 to 3 which determines which key to inject
 	0: No key
 	1: Silver key
 	2: Gold key
