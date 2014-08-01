@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 A quick Python script for injecting keys into a Dustforce map.
 This let's you add or remove keys from custom maps, which can be useful if you
 are using a stock level as a base, or if you are designing a custom hub.
