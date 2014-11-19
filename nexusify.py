@@ -19,7 +19,7 @@ def set_nexus(filename, nexusify):
 	nexus_index = None
 	nexus_location = None
 	for i in range(len(nexus_flags)):
-		possible_nexus = level.find(neuxs_flags[i] + '\x00\x00\x00', after_header)
+		possible_nexus = level.find(nexus_flags[i] + '\x00\x00\x00', after_header)
 		if possible_nexus != -1:
 			if i / 2 == 0:
 				print "Found a normal level"
@@ -39,14 +39,14 @@ def set_nexus(filename, nexusify):
 		f.write(nexus_flags[2 + nexus_index % 2])
 	else:
 		print 'Making the nexus a level...'
-		f.write(nexus_flags[2 + nexus_index % 2])
+		f.write(nexus_flags[nexus_index % 2])
 		
 	print ''
 	f.close()
 	
 if __name__ == '__main__':
-	if len(sys.argv) == 3
-		set_nexus(sys.argv[1], bool(sys.argv[2]))
+	if len(sys.argv) == 3:
+		set_nexus(sys.argv[1], bool(int(sys.argv[2])))
 	else:
 		print 'Type in the filename of the level to nexusify / denexusify:'
 		level = raw_input()
